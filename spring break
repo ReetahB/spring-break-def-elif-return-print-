@@ -1,0 +1,26 @@
+def airbnb_cost(days):
+    #if airbnb cost 140 per night..
+    return 140 * days
+
+def plan_ride_cost(city):
+    if city == "Maldives":
+        return 583
+    elif city == "Bora Bora":
+        return 220
+    elif city == "Rome":
+        return 222
+    elif city == "Aspen":
+        return 475
+
+def rentalcar_cost(days):
+    if days >= 7:
+        return (100 * day) - 50
+    elif 3<=days<=6:
+        return (100 * days) - 20
+    elif days <= 2:
+        return (100 *days)
+    
+def trip_cost(city,days,money):
+    return airbnb_cost(days) + plan_ride_cost(city) + rentalcar_cost(days) + money
+
+print trip_cost("Maldives",5,600)
